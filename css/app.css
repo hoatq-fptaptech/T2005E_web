@@ -1,0 +1,24 @@
+body{
+    background-image: url("../imgs/5064169-hd-business-wallpaper.jpg");
+    background-repeat: no-repeat;/* repeat repeat-x  repeat-y*/
+    background-size: cover;
+    background-color: red;
+}
+h1{
+    color:red;
+    text-shadow: 5px 3px 15px darkgreen;
+    font-size: 60px;
+}
+p{
+    color: #ffa500;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;/* center left right justify */
+    font-family: sans-serif;
+    font-weight: 400;/* 100 200 300 400(normal) 500 600 700(bold) 800 900  */
+    text-decoration:none;/* underline  line-through overline none */
+    text-indent: 20px;
+    word-spacing: 1px;
+    text-transform: none;/* uppercase lowercase capitalize none*/
+    background-color:gray;
+}
