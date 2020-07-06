@@ -1,0 +1,80 @@
+#box0{
+    float:left;
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    /*position: relative;*/
+}
+#box1{
+    float:left;
+    width: 500px;
+    height: 500px;
+    background-color: #7FFFD4;
+    position: relative;
+    margin-left: 100px;
+    box-shadow: 5px 5px 10px red;
+}
+#box2{
+    float:left;
+    width: 50px;
+    height: 50px;
+    background-color: #ffa500;
+    border-radius: 100%;
+    position: fixed;
+    top:50px;
+    right: 100px;
+    z-index: 10;
+}
+#box3{
+    float:left;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 100%;
+    position: fixed;
+    top:250px;
+    right: 100px;
+    z-index: 11;
+    animation-name: trafficLight;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 10s;
+}
+@keyframes trafficLight {
+    0%{
+        background-color: red;
+    }
+    33.33%{
+        background-color: green;
+    }
+    80%{
+        background-color: yellow;
+    }
+}
+@keyframes changecolor {
+    from{
+        background-color: green;
+        width: 100px;
+        height: 100px;
+    }
+    to{
+        background-color: blueviolet;
+        width: 50px;
+        height: 50px;
+    }
+}
+#box1 > div{
+    /*background-color: #ffa500;*/
+    /*position: absolute;*/
+    /*top:0;left:0;*/
+    /*transform: translateY(50px);*/
+    transition: all 300ms;
+}
+#box1 > div:hover{
+    background-color: #ff4f85;
+    transform: scale(1.15);
+}
+#box1:hover >div{
+
+}
+
