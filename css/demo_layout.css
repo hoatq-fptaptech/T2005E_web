@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    color: #343132;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f2f2f2;
+}
+.section{
+    float:left;
+    width: 100%;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* header */
+.header{
+    padding: 25px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 60px;
+}
+.logo{
+    float:left;
+    width: 30%;
+}
+.right{
+    float: right;
+    width: 70%;
+}
+.logo a{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#343132;
+    font-weight: 700;
+}
+.menu{
+    float:right;
+    margin-top: 12px;
+}
+.menu li{
+    float:left;
+    margin-left: 35px;
+    color: #c6c8c2;
+}
+.menu li:first-child{
+    list-style: none;
+}
+.menu li:last-child{
+
+}
+.menu li:nth-child(odd){
+
+}
+.menu li:nth-child(even){
+
+}
+.menu li a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #c6c8c2;
+    transition: all 150ms;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu li a:hover{
+    color: #343132;
+}
+.content{
+    float:left;
+    width: 66.67%;
+    padding-right: 15px;
+}
+.sidebar{
+    float: right;
+    width: 33.33%;
+    padding-left: 15px;
+}
+.content .tweet{
+    background-image: url("../imgs/Mua-lu-lich-su-trong-vong-70-nam-o-Trung-Quoc-anh-huong-the-nao-toi-Viet-Nam-1-1593424417-614-width860height484.jpg");
+    background-size: cover;
+    float: left;
+    width: 100%;
+}
+.tweet .tweet-content{
+    background-color: #ff253a95;
+    float: left;
+    width: 100%;
+    padding: 30px;
+}
+.tweet h2{
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.tweet p{
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+}
