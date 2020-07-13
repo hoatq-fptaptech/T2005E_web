@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    color: #343132;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f2f2f2;
+}
+.section{
+    float:left;
+    width: 100%;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+input[type=text],input[type=email]{
+
+}
+input[name=password]{
+
+}
+.input-text{
+    float: left;
+    width: 45%;
+    height: 35px;
+    margin-right: 10px;
+    font-size: 15px;
+    color: red;
+}
+.input-group{
+    float: left;
+    width: 100%;
+    margin: 15px 0;
+}

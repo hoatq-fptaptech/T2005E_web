@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/demo_form.css"/>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <form method="post" action="#">
+                <div class="input-group">
+                    <input id="fullname" class="input-text" type="text" name="fullname" placeholder="Full Name" required/>
+                    <input type="email" class="input-text" name="email" placeholder="Enter email.." required/>
+                </div>
+                <div class="input-group">
+                    <input type="password" class="input-text" name="password" placeholder="Password.." required/>
+                    <input type="number" class="input-text" name="years" placeholder="Year old"/>
+                </div>
+                <div class="input-group">
+                    <input type="date" class="input-text" name="birthday" placeholder="Birthday.." readonly/>
+                    <input type="time" class="input-text" name="time_birthday" placeholder="Time.." disabled/>
+                </div>
+                <div class="input-group">
+                    <input type="file" class="input-text" name="avatar" placeholder="Avatar.."/>
+                    <input type="color" class="input-text" name="my_color" placeholder="My color.."/>
+                </div>
+                <div class="input-group">
+                    <label><input type="radio" name="sex" value="male"/>Nam</label>
+                    <label><input type="radio" name="sex" value="female"/>Nữ</label>
+                    <label><input type="radio" name="sex" value="other"/>Khác</label>
+                </div>
+                <div class="input-group">
+                    <label for="yearwedding">Độ tuổi muốn kết hôn:</label>
+                    <input id="yearwedding" type="range" min="18" max="99" name="yearwedding"/>
+                </div>
+                <div class="input-group">
+                    <label><input type="checkbox" name="rules"/>Tôi đồng ý với các điều kiện đặt ra.</label>
+                </div>
+                <div class="input-group">
+                    <select class="input-text" name="city">
+                        <option>Vui lòng chọn tỉnh/thành phố...</option>
+                        <optgroup label="Miền bắc">
+                            <option value="HN">Hà Nội</option>
+                            <option value="HP">Hải Phòng</option>
+                        </optgroup>
+                        <optgroup label="Miền trung">
+                            <option value="DN">Đà Nẵng</option>
+                        </optgroup>
+                        <optgroup label="Miền nam">
+                            <option value="HCM">TP HCM</option>
+                            <option value="CT">Cần Thơ</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <textarea class="input-text" name="description" rows="10" cols="100" placeholder="Giới thiệu bản thân.."></textarea>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button type="button">Button</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
