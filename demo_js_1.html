@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo JS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // day la comment code
+        // cách 1: nhúng thẳng code js vào đây
+
+        // alert("Trang nay ko danh cho nguoi duoi 18 tuoi.");
+        // var v = confirm("Ban co chac chan muon di tiep?");
+        // console.log(v);
+
+
+        setTimeout(function () {
+            var r = Math.random()*100;
+            r = parseInt(r);
+            do{
+                var p = prompt("Nhap vao con so may man trong khoang 0-99 cua ban:");
+                p = parseInt(p);
+            }while (isNaN(p) || p>100 || p<0);
+            if(p==r){
+                alert("Chuc mung ban da trung 100 ty");
+            }else{
+                alert("chuc ban may man vao ngay mai.");
+            }
+        },3000);
+        console.log("xin chao");
+        // var stv = setInterval(function () {
+        //     var r1 = parseInt(Math.random()*6+1);
+        //     var r2 = parseInt(Math.random()*6+1);
+        //     var r3 = parseInt(Math.random()*6+1);
+        //
+        //     do{
+        //         var tx = prompt("Vui long chon: 1 - tai  0 - xiu:");
+        //         tx = parseInt(tx);
+        //     }while (isNaN(tx) || tx>1 || tx<0);
+        //
+        //     if((r1+r2+r3)>9 && tx == 1){
+        //         alert("trung giai");
+        //         clearInterval(stv);
+        //     }else if((r1+r2+r3)<10 && tx ==0){
+        //         alert("trung giai");
+        //         clearInterval(stv);
+        //     }else{
+        //         alert("lien he ngan hang de duoc ho tro choi tiep");
+        //     }
+        // },3000);
+
+        // cách 2: dùng file ngoại vi ( mẫu ở dưới)
+    </script>
+<!--    <script type="text/javascript" src="js/demo_js_1.js"></script>-->
+</body>
+</html>
