@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Object</title>
+</head>
+<body>
+    <h1 id="sv-name"></h1>
+    <h2 id="mssv"></h2>
+    <h3 id="telephone">ĐT: </h3>
+    <h4 id="diachi">Địa chỉ: </h4>
+    <h4>Tên bạn gái:</h4>
+    <h3>Dưới đây là danh sách các vệ tinh của bạn gái:</h3>
+    <ol>
+        <li>Nguyễn Thành Đông</li>
+        <li>Nguyễn Thành Đông</li>
+        <li>Nguyễn Thành Đông</li>
+        <li>Nguyễn Thành Đông</li>
+        <li>Nguyễn Thành Đông</li>
+        <li>Nguyễn Thành Đông</li>
+    </ol>
+    <script type="text/javascript">
+        var sv = {
+            name: "Lê Đức Anh",
+            MSSV: "20042019",
+            tel: "0987654321",
+            address:"Tháp rùa, Hồ Gươm",
+            girlFriend:{
+                name: "Ngọc Trinh",
+                tel: "0987666666",
+                address:"5 Quang Trung, Ba Đình, HN",
+                vetinh:[
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    }
+
+                ],
+                nhantin:function () {
+                    console.log("Nhắn tin cho 1 người nào đó");
+                },
+                trangdiem:function () {
+                    console.log("Trang điểm 45 phút");
+                }
+            },
+            ghen: function () {
+                console.log("Ghen...");
+            },
+            dichoi: function () {
+                console.log("đi chơi")
+            }
+        }
+        var h1  = document.getElementById("sv-name");
+        h1.innerText = sv.name;
+        document.getElementById("mssv").innerText = sv.MSSV;
+        document.getElementById("telephone").innerText += " "+sv.tel;
+        document.getElementById("diachi").innerText += " "+sv.address;
+    </script>
+</body>
+</html>

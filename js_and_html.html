@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS And HTML</title>
+</head>
+<body>
+    <h1 id="title" class="abc"><i>Đây là tiêu đề 1 bài báo</i></h1>
+    <p id="content">Chỉ 2 phút trước khi Marcus Rashford mở tỷ số cho MU, tranh cãi dữ dội nổi lên khi Victor Lindelof phạm lỗi với Wilfried Zaha trong vòng cấm. Trọng tài chính tham khảo ý kiến của VAR nhưng vẫn không xác định penalty. Nên biết, đến 2 cựu danh thủ của “Quỷ đỏ” là Rio Ferdinand và Owen Hargreaves cũng phải thừa nhận Lindelof đã “đá người trước rồi mới đá bóng”.
+        Sang đến hiệp 2, lần này Palace đã đưa được bóng vào lưới MU nhưng bàn thắng của Jordan Ayew không được công nhận vì lỗi việt vị của... đầu mũi giầy tiền đạo này. Trong một pha bóng nhạy cảm và khó đoán định như vậy, MU đã được “thần may mắn” mỉm cười.
+        Nhìn kỹ hơn vào những tình huống trên, có thể thấy hàng thủ MU vẫn lộ ra rất nhiều bất cập, đặc biệt là vị trí trung vệ của bộ đôi Lindelof – Maguire. Ở tình huống đầu tiên, giới chuyên môn tỏ ra khó hiểu vì pha vào bóng tương đối nghiệp dư của Lindelof, dù anh cũng từng tiêu tốn của MU tới 40 triệu bảng. Đây không phải lần đầu Lindelof có những pha bóng thiếu chỉn chu như vậy.</p>
+    <script type="text/javascript">
+
+        var obj = {
+            name: "Nguyễn Thị Na",
+            age: 18,
+            tel: "099999888",
+            address:"8 tôn thất thuyết",
+            run: function () {
+                console.log(this.name+" đang chạy từ "+this.address);
+                return this;
+            },
+            eat: function () {
+                console.log(this.name+" đang ăn hoa quả");
+                return this;
+            }
+        }
+        var obj2 = {
+            name: "Nguyễn Văn Trãi",
+            age: 28,
+            tel: "078787878",
+            child:{
+                child_name: "Nguyễn Văn Trỗi",
+                dibo: function () {
+                    console.log(this.child_name+" đang đi bộ cùng bố");
+                }
+            },
+            dibo: function () {
+                console.log(this.name+" đang đi bộ cùng con là: "+this.child.child_name);
+                this.child.dibo();
+            }
+        }
+        obj.run();
+        console.log("ten cua ban: "+ obj.name);
+        obj.name = "Nguyễn Cao Kỳ Duyên";
+        console.log(obj.name+" tel: "+obj.tel);
+        obj.run().eat().run().eat().run().eat();
+
+        var sv = {
+            name: "Lê Đức Anh",
+            MSSV: "20042019",
+            tel: "0987654321",
+            address:"Tháp rùa, Hồ Gươm",
+            girlFriend:{
+                name: "Ngọc Trinh",
+                tel: "0987666666",
+                address:"5 Quang Trung, Ba Đình, HN",
+                vetinh:[
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    },
+                    {
+                        name:"Nguyễn Thành Đông",
+                        tel:"098837373",
+                        loaiXe:"Ba gác",
+                        muaqua: function () {
+                            console.log("Mua quà...")
+                        }
+                    }
+
+                ],
+                nhantin:function () {
+                    console.log("Nhắn tin cho 1 người nào đó");
+                },
+                trangdiem:function () {
+                    console.log("Trang điểm 45 phút");
+                }
+            },
+            ghen: function () {
+                console.log("Ghen...");
+            },
+            dichoi: function () {
+                console.log("đi chơi")
+            }
+        }
+        // tạo các đối tượng DOM element
+        var h = document.getElementById("title");
+        //console.log(h);
+        console.log(h.innerText);
+        //h.innerText = sv.name;
+        console.log(h.innerHTML);
+        h.innerHTML = "<b><i><u>"+sv.name+"</u></i></b>";
+        h.style.color = "red";
+        h.style.fontSize = "50px";
+        h.style.backgroundColor = "green";
+        h.classList.add("t2005e");
+        h.classList.remove("abc");
+    </script>
+</body>
+</html>
