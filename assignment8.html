@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vietlot</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var randomNumbers = [];
+        do{
+            var r = parseInt(Math.random()*100);
+            if(!randomNumbers.includes(r,0)){
+                randomNumbers.push(r);
+            }
+        }while (randomNumbers.length<5)
+        var chooseNumbers = [];
+        do{
+            var c = prompt("Chon so may man thu "+(chooseNumbers.length+1));
+            c = parseInt(c);
+            if(!chooseNumbers.includes(c,0) && !isNaN(c) && c>=0 && c<100){
+                chooseNumbers.push(c);
+            }
+        }while (chooseNumbers.length<5);
+        var count = 0;
+        chooseNumbers.map(function (n) { // chooseNumbers[i]
+            if(randomNumbers.includes(n,0)){
+                count++;
+            }
+        });
+        if(count>=5){
+            alert("Ban da trung jackpot 100 ty");
+        }else if(count>=4){
+            alert("Ban da trung giai 30 trieu");
+        }else if(count >=3){
+            alert("Ban trung giai thuong 1 trieu");
+        }else{
+            alert("Chuc may man ky quay sau");
+        }
+    </script>
+</body>
+</html>
