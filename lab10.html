@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lab10.css"/>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="categories" id="cats">
+
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var cats = [
+            {
+                name:"Điện thoại",
+                image: "imgs/products/dien-thoai.png",
+                link: "dien-thoai.html"
+            },
+            {
+                name:"Laptop",
+                image: "imgs/products/laptop.png",
+                link: "laptop.html"
+            },
+            {
+                name:"Apple",
+                image: "imgs/products/apple.png",
+                link: "apple.html"
+            },
+            {
+                name:"Máy tính bảng",
+                image: "imgs/products/tablet.png",
+                link: "tablet.html"
+            },
+            {
+                name:"Đồng hồ thông minh",
+                image: "imgs/products/smart-watch.png",
+                link: "smart-watch.html"
+            },
+            {
+                name:"Ốp lưng điện thoại",
+                image: "imgs/products/op-lung.png",
+                link: "op-lung.html"
+            },
+            {
+                name:"Tai nghe",
+                image: "imgs/products/tai-nghe.png",
+                link: "tai-nghe.html"
+            },
+            {
+                name:"Thẻ nhớ",
+                image: "imgs/products/the-nho.png",
+                link: "the-nho.html"
+            },
+            {
+                name:"Loa nghe nhạc",
+                image: "imgs/products/loa-nghe-nhac.png",
+                link: "loa-nghe-nhac.html"
+            },
+            {
+                name:"Sạc cáp",
+                image: "imgs/products/cap-sac.png",
+                link: "sac-cap.html"
+            },
+            {
+                name:"Máy tính để bàn",
+                image: "imgs/products/may-tinh-de-ban.png",
+                link: "may-tinh-de-ban.html"
+            },
+            {
+                name:"Máy in",
+                image: "imgs/products/may-in.png",
+                link: "may-in.html"
+            },
+        ];
+        cats.map(function (c) {
+            var a_html = "<a href=\""+c.link+"\">\n" +
+                "                    <div class=\"item\">\n" +
+                "                        <div class=\"image\">\n" +
+                "                            <img src=\""+c.image+"\"/>\n" +
+                "                        </div>\n" +
+                "                        <p>"+c.name+"</p>\n" +
+                "                    </div>\n" +
+                "                </a>";
+            document.getElementById("cats").innerHTML += a_html;
+        });
+    </script>
+</body>
+</html>

@@ -9,15 +9,10 @@
     <h2 id="mssv"></h2>
     <h3 id="telephone">ĐT: </h3>
     <h4 id="diachi">Địa chỉ: </h4>
-    <h4>Tên bạn gái:</h4>
+    <h4 id="gfname">Tên bạn gái:</h4>
     <h3>Dưới đây là danh sách các vệ tinh của bạn gái:</h3>
-    <ol>
-        <li>Nguyễn Thành Đông</li>
-        <li>Nguyễn Thành Đông</li>
-        <li>Nguyễn Thành Đông</li>
-        <li>Nguyễn Thành Đông</li>
-        <li>Nguyễn Thành Đông</li>
-        <li>Nguyễn Thành Đông</li>
+    <ol id="vetinh">
+
     </ol>
     <script type="text/javascript">
         var sv = {
@@ -139,6 +134,13 @@
         document.getElementById("mssv").innerText = sv.MSSV;
         document.getElementById("telephone").innerText += " "+sv.tel;
         document.getElementById("diachi").innerText += " "+sv.address;
+        document.getElementById("gfname").innerText += " "+sv.girlFriend.name;
+        var vetinhs = sv.girlFriend.vetinh;
+        var ol_vetinh = document.getElementById("vetinh");
+        vetinhs.map(function (v) {
+            var li_html = "<li>"+v.name+" di xe: "+v.loaiXe+"</li>";
+            ol_vetinh.innerHTML += li_html;
+        })
     </script>
 </body>
 </html>
