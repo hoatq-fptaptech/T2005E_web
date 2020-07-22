@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Event</title>
+    <link rel="stylesheet" href="css/demo_event.css"/>
+</head>
+<body>
+    <button type="button" onclick="ok()">Ok</button>
+    <div id="box" ondblclick="dbC(this);" class="box" onmouseenter="green(this)"
+         onmouseleave="pink(this)"></div>
+    <div id="box2" ondblclick="dbC(this)" class="box" onmouseenter="green(this)"
+         onmouseleave="pink(this)"></div>
+    <p oncopy="abc()" oncut="abc();" onpaste="abc()">Mục tiêu top 4 sắp hoàn thành và đó sẽ là thành công lớn đối với đội chủ sân Old Trafford, bởi đặc quyền dự Champions League luôn là khát khao với bất cứ đội bóng nào tại châu Âu.
+        Theo quy định, mỗi đội bóng có mặt tại vòng bảng giải đấu này đều sẽ nhận một khoản tiền 12 triệu euro. Bên cạnh đó các CLB còn nhận được tiền thưởng từ mỗi trận đấu... Chi tiết những quyền lợi lớn mà MU sắp được hưởng sẽ có trong Clip 1 phút Bóng đá 24H ngày 22/7/2020. Mời các bạn chú ý đón xem!</p>
+    <br/>
+    <input type="text" name="demo" onkeydown="showKeyDown(this)" onkeyup="showKeyUp(this)"
+           onkeypress="showKeyPress(this)"/>
+    <select name="sex" onchange="gender(this)">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+    <form action="#" method="get">
+        <input name="email" type="email" placeholder="email"/>
+        <button type="submit" onclick="return confirm('Chac chan gui di chua?')">Submit</button>
+    </form>
+
+    <script type="text/javascript">
+        function ok() {
+            alert("Hello world!");
+        }
+        function green(e) {
+            e.style.backgroundColor = 'green';
+        }
+        function pink(e) {
+            e.style.backgroundColor = "deeppink";
+        }
+        function dbC(e) {
+            e.style.backgroundColor = "red";
+        }
+
+        function abc() {
+            alert("Vi phạm bản quyền..");
+        }
+    </script>
+    <script type="text/javascript">
+        function gender(e) {
+            var v =  e.value;
+            console.log(v);
+        }
+        function showKeyDown(e) {
+            var v = e.value;
+            //console.log(v);
+        }
+        function showKeyUp(e) {
+            var v = e.value;
+            var kc = event.keyCode;
+            console.log(kc);
+            if(kc == 13){
+                console.log(v);
+            }
+            //console.log(v);
+        }
+        function showKeyPress(e) {
+            var v = e.value;
+            //console.log(v);
+        }
+    </script>
+</body>
+</html>

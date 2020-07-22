@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+    <h1 id="abc">Demo JS with class tag</h1>
+    <p class="pg">Sau 16 năm, cuối cùng Leeds United cũng giành vé trở lại giải Ngoại hạng Anh - nơi họ từng là một trong những tên tuổi lớn. Đội chủ sân Elland Road đã xuất sắc vô địch giải hạng Nhất để giành 1 trong 2 suất trực tiếp góp mặt tại đấu trường số 1 bóng đá xứ sở sương mù mùa giải 2020/21, cùng đội á quân West Bromwich Albion.</p>
+    <p class="pg">
+        Cavani vừa kết thúc hợp đồng với PSG và đang là cầu thủ tự do, trong khi Ibra vừa lập cú đúp giúp AC Milan thắng 2-1 trên sân của Sassuolo ở vòng 35 Serie A, để sáng cửa dự cúp châu Âu mùa sau. Tuy nhiên, tương lai của lão tướng người Thụy Điển mùa sau vẫn chưa rõ ràng khi hợp đồng hiện tại của anh với "Rossoneri" sẽ kết thúc khi mùa này hạ màn.
+    </p>
+<script type="text/javascript">
+    var h = document.getElementById("abc");// object
+    var p = document.getElementsByClassName("pg");
+    h.style.textTransform = "uppercase";
+    for(var i=0;i<p.length;i++){
+        p[i].style.color = "red";
+    }
+    var p2 = document.getElementsByTagName("p");
+    for(var e of p2){
+        e.style.color = "green";
+    }
+    var p3 = document.getElementsByTagName("h1");
+    for(var e of p3){
+        e.style.textTransform = "none";
+    }
+    var p4 = document.querySelectorAll("p.pg");
+    console.log(p4);
+    var p5 = document.querySelectorAll("#abc");
+    console.log(p5);
+    var ip = document.querySelectorAll("input[type=text]");
+    var ip2 = document.querySelectorAll("input[name=email]");
+    var body = document.body;
+    console.log(body);
+    var head = document.head;
+    var title = document.title;
+    var links = document.links;
+    console.log(links);
+</script>
+</body>
+</html>
