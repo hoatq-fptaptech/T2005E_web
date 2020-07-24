@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo jquery</title>
+</head>
+<body>
+    <input type="number" name="minute"/><br/>
+    <button type="button" onclick="boxOn()">ON</button>
+    <button type="button" onclick="boxOff()">OFF</button>
+    <button type="button" onclick="OnOff()">ON - OFF</button>
+    <button type="button" onclick="Move()">Move</button>
+    <div class="box">
+        <h1 id="heading">Tiêu đề jQuery</h1>
+        <h2>Tác giả: jQuery</h2>
+        <p class="pg">Compressed and uncompressed copies of jQuery files are available. The uncompressed file is best used during development or debugging; the compressed file saves bandwidth</p>
+        <p class="pg">and improves performance in production. You can also download a sourcemap file for use when debugging with a compressed file. The map file is not required for users to run jQuery, it just improves the developer's debugger experience. As of jQuery 1.11.0/2.1.0 the //# sourceMappingURL</p>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        var h = $("#heading");
+        h.css("color","red");
+        h.css({
+            "color":"green",
+            "background-color":"pink",
+            "border-bottom":"1px solid orange"
+        });
+        console.log(h.text());
+        h.text("Xin chao cả lớp!");
+        console.log(h.html());
+        h.html("<i>HAHAHAA</i>");
+        h.html(h.html()+"<u>T2005E</u>");
+        h.append("<i>Hello world</i>");
+        h.prepend("<i>Hello world</i>");
+        h.addClass("active");
+        h.removeClass("abc");
+        // class
+        var pg = $(".pg");
+        pg.css("color","orange");
+        var pp = $("p");
+        pp.css("text-transform","uppercase");
+
+    </script>
+    <script type="text/javascript">
+        function boxOn() {
+            var box = $(".box");
+            //box.show();
+            // box.fadeIn();
+            box.slideDown(5000);
+        }
+        function boxOff() {
+            var box = $(".box");
+            //box.hide();
+            // box.fadeOut(200);
+            box.slideUp();
+        }
+        function OnOff() {
+            var box = $(".box");
+            // box.toggle();
+            // box.fadeToggle();
+            box.slideToggle();
+        }
+        function Move() {
+            var box = $(".box");
+            var m = $("input[name=minute]").val();
+            m = parseInt(m);
+            m = isNaN(m)?0:m;
+            box.animate({
+                "margin-left": m+"px",
+                "margin-top": m+"px",
+            },400);
+        }
+    </script>
+</body>
+</html>

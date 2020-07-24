@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+</head>
+<body>
+    <input type="number" name="minute"/>
+    <button type="button" onclick="Clock()">Ok</button>
+    <h1><span class="min">00</span>:<span class="sec">00</span></h1>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" >
+        var min=10;
+        var timer;
+        function Clock() {
+            min = $("input[name=minute]").val();
+            min = parseInt(min);
+            min = (isNaN(min) || min<=0)?10:min;
+            var sec=0;
+            clearInterval(timer);
+            timer = setInterval(function () {
+                // in phut giay len html
+                $(".min").text(min<10?"0"+min:min);
+                $(".sec").text(sec<10?"0"+sec:sec);
+                // thay doi thoi gian
+                sec--;
+                if(sec<0){
+                    min--;
+                    sec=59;
+                }
+                if(min<0) clearInterval(timer);
+            },100)
+        }
+
+    </script>
+
+</body>
+</html>
