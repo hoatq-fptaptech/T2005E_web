@@ -9,39 +9,49 @@
     <section class="section">
         <div class="container">
             <ul class="nav">
-                <li><a href="#" onclick="tabs(this,'home')" class="item active">Home</a></li>
-                <li><a href="#" onclick="tabs(this,'profile')" class="item">Profile</a></li>
-                <li><a href="#" onclick="tabs(this,'messages')" class="item">Messages</a></li>
-                <li><a href="#" onclick="tabs(this,'setting')" class="item">Setting</a></li>
+                <li><a href="#" onclick="tabs(this,0)" class="item active">Home</a></li>
+                <li><a href="#" onclick="tabs(this,1)" class="item">Profile</a></li>
+                <li><a href="#" onclick="tabs(this,2)" class="item">Messages</a></li>
+                <li><a href="#" onclick="tabs(this,3)" class="item">Setting</a></li>
             </ul>
             <div class="tab-content">
-                <div id="home" class="tab active">
-                    Home
-                </div>
-                <div id="profile" class="tab">
-                    Profile
-                </div>
-                <div id="messages" class="tab">
-                    Message
-                </div>
-                <div id="setting" class="tab">
-                    Setting
+                <div class="cinema" id="cinema">
+                    <div id="home" class="tab active">
+                        Home
+                    </div>
+                    <div id="profile" class="tab">
+                        Profile
+                    </div>
+                    <div id="messages" class="tab">
+                        Message
+                    </div>
+                    <div id="setting" class="tab">
+                        Setting
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 <script type="text/javascript">
-    function tabs(e,idName) {
+    // function tabs(e,idName) {
+    //     var li = document.getElementsByClassName("item");
+    //     var content = document.getElementsByClassName("tab");
+    //     for(var i of li){
+    //         i.classList.remove("active");
+    //     }
+    //     for(var i of content){
+    //         i.classList.remove("active");
+    //     }
+    //     e.classList.add("active");
+    //     document.getElementById(idName).classList.add("active");
+    // }
+    function tabs(e,number) {
         var li = document.getElementsByClassName("item");
-        var content = document.getElementsByClassName("tab");
         for(var i of li){
             i.classList.remove("active");
         }
-        for(var i of content){
-            i.classList.remove("active");
-        }
         e.classList.add("active");
-        document.getElementById(idName).classList.add("active");
+        document.getElementById("cinema").style.left = -number*800+"px";
     }
 </script>
 </body>
