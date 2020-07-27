@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo ajax</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1>City, Country</h1>
+            <h2 class="temp">Temp</h2>
+            <h3 class="min">Min: </h3>
+            <h3 class="max">Max: ... </h3>
+            <h3 class="press">Pressure:</h3>
+            <h3 class="humidity">Humidity:</h3>
+            <h4 class="description"></h4>
+        </div>
+    </section>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $.ajax({
+        url:"http://api.openweathermap.org/data/2.5/weather",
+        method:"GET",
+        data:{
+            q:"thanh hoa,vn",
+            appid:"09a71427c59d38d6a34f89b47d75975c",
+            units:"metric"
+        },
+        success: function (rs) {
+            $("h1").text(rs.name+","+rs.sys.country);
+            $(".temp").html(rs.main.temp+"<sup>o</sup>C");
+            $(".min").html(rs.main.temp_min+"<sup>o</sup>C");
+            $(".max").html(rs.main.temp_max+"<sup>o</sup>C");
+            $(".press").text(rs.main.pressure);
+            $(".humidity").text(rs.main.humidity);
+            for (var i  of rs.weather) {
+                $(".description").append("<p>"+i.description+"</p>");
+            }
+        }
+    });
+</script>
+</body>
+</html>
