@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo bootstrap JS</title>
+    <link rel="stylesheet" href="libs/bootstrap3.3.7/css/bootstrap.css"/>
+    <link rel="stylesheet" href="libs/nivoslider/themes/default/default.css"/>
+    <link rel="stylesheet" href="libs/nivoslider/nivo-slider.css"/>
+</head>
+<body>
+<!-- Button trigger modal -->
+<a  href="#" data-toggle="modal" data-target="#myModal">
+    Login
+</a>
+<div class="dropdown">
+    <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown trigger
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dLabel">
+        <li>Home</li>
+        <li>Profile</li>
+        <li>Messages</li>
+        <li>Setting</li>
+    </ul>
+</div>
+
+
+<div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+        <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">Home</div>
+        <div role="tabpanel" class="tab-pane" id="profile">Profile</div>
+        <div role="tabpanel" class="tab-pane" id="messages">Messages</div>
+        <div role="tabpanel" class="tab-pane" id="settings">Settings</div>
+        <div role="tabpanel" class="tab-pane" id="reviews">Reviews</div>
+    </div>
+
+</div>
+<section class="section">
+    <div class=" theme-default">
+        <div id="slider" class="nivoSlider">
+            <img src="imgs/toystory.jpg" data-thumb="imgs/toystory.jpg" alt="" />
+            <img src="imgs/up.jpg" data-thumb="imgs/up.jpg" alt="" title="This is an example of a caption" />
+            <img src="imgs/walle.jpg" data-thumb="imgs/walle.jpg" alt="" data-transition="slideInLeft" />
+            <img src="imgs/nemo.jpg" data-thumb="imgs/nemo.jpg" alt="" title="#htmlcaption" />
+        </div>
+    </div>
+    <div class="container">
+        <div id="map" style="width: 800px;height: 400px"></div>
+    </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Login</h4>
+            </div>
+            <form method="get" action="#">
+            <div class="modal-body">
+
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input class="form-control" name="username" type="text" placeholder="User Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-control" name="pass" type="password" placeholder="Password"/>
+                    </div>
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select class="form-control" name="role">
+                            <option value="1">Admin</option>
+                            <option value="2">User</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-danger"><i class="glyphicon glyphicon-ok"></i> Submit</button>
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="submit" class="btn btn-warning">Submit</button>
+                <button type="button" data-dismiss="modal" class="btn btn-default">Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="libs/bootstrap3.3.7/js/bootstrap.js"></script>
+    <script type="text/javascript" src="libs/nivoslider/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $('#slider').nivoSlider();
+    </script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var uluru = {lat: 21.0290081, lng: 105.7818665};
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 18, center: uluru});
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: uluru, map: map,
+                label: {
+                    text:"Lớp T2005E",
+                    color:"green"
+                }
+            });
+        }
+    </script>
+
+    <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaj0mHlR-keu-9hsR6d-gB0L9BclG04rk&callback=initMap">
+    </script>
+</body>
+</html>
