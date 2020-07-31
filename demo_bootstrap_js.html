@@ -120,12 +120,16 @@
             var map = new google.maps.Map(
                 document.getElementById('map'), {zoom: 18, center: uluru});
             // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({position: uluru, map: map,
-                label: {
-                    text:"Lớp T2005E",
-                    color:"green"
+            var marker = new google.maps.Marker(
+                {
+                    position: uluru,
+                    map: map,
+                    label: {
+                        text:"Lớp T2005E",
+                        color:"green"
+                    }
                 }
-            });
+            );
         }
     </script>
 
